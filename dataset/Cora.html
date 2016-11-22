@@ -15,11 +15,11 @@
 
     <title>
         
-            Cora weight vectors &middot; Data Linkage Repository
+            Cora &middot; Data Linkage Repository
         
     </title>
 
-    <link rel="canonical" href="http://dlrep.org/dataset/Cora-weight-vectors/Cora-weight-vectors">
+    <link rel="canonical" href="http://dlrep.org/dataset/Cora">
 
     <!-- import jQuery -->
     <script
@@ -141,9 +141,9 @@
                             prose.io is a service which may be better than GitHub's editor for this task.
                             We need to look into it some more before switching to it though.
                             Here what the link should look like.
-                            <a href="http://prose.io/#dlrep/dlrep/edit/master/_datasets/Cora-weight-vectors/Cora-weight-vectors.md">
+                            <a href="http://prose.io/#dlrep/dlrep/edit/master/_datasets/Cora.md">
                         -->
-                        <a href="https://github.com/dlrep/dlrep/edit/master/_datasets/Cora-weight-vectors/Cora-weight-vectors.md">
+                        <a href="https://github.com/dlrep/dlrep/edit/master/_datasets/Cora.md">
                             <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                             Edit this page
                         </a>
@@ -155,19 +155,19 @@
     </nav>
 
     <div class="container">
-        <h2> Data Set: Cora weight vectors </h2>
+        <h2> Data Set: Cora </h2>
 
 <hr>
 
 <p>
     Proposed by:
     
-        Peter Christen
+        Andrew McCallum
     
 </p>
 
 <p>
-    Added on: 21 November 2016.
+    Added on: 20 November 2016.
 </p>
 
 
@@ -180,7 +180,7 @@
     
         <a href="http://dlrep.org/tag/public">public</a>,
     
-        <a href="http://dlrep.org/tag/similarity">similarity</a>
+        <a href="http://dlrep.org/tag/external">external</a>
     
 </p>
 
@@ -189,60 +189,30 @@
 
 <h2 id="description">Description</h2>
 
-<p>This data set is a file containing vectors with weights (similarities) as calculated between attributes of the
-<a href="../cora/Cora.html">Cora</a> data set.</p>
+<p>The Cora data contains bibliographic records of machine learning papers that have been manually clustered into groups that
+refer to the same publication.</p>
+
+<p>Originally, Cora was prepared by Andrew McCallum, and his versions of this data set are available on his
+<a href="https://people.cs.umass.edu/~mccallum/data.html">Data</a> web page.
+The data is also hosted <a href="Cora-files/cora.csv">here</a> in the DLRep.</p>
+
+<p>Note that various versions of the Cora data set have been used by many publications in record linkage and entity resolution
+over the years.</p>
 
 <h2 id="files">Files</h2>
 
-<p><a href="cora-weight-vectors.csv.gz">cora-weight-vectors.csv.gz</a></p>
+<p><a href="Cora-files/cora.csv">cora.csv</a></p>
 
-<p>The header line of this file contains the following attributes/fields:</p>
+<p>The Cora versions local in <a href="http://dlrep.org">dlrep</a> is a comma separated values (CSV) file as downloaded from the
+<a href="http://secondstring.sourceforge.net/">SecondString</a> approximate string matching open source package.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>rec_id1,rec_id2,Str-Exact-ID-ID,Q-Gram-AUTHORS-AUTHORS,Q-Gram-TITLE-TITLE,Q-Gram-VENUE-VENUE,Edit-Dist-YEAR-YEAR
-</code></pre>
-</div>
-
-<p>with elements:</p>
 <ul>
-  <li>
-    <p>rec_id1, rec_id2: The two (internal to Febrl, see below) record identifiers.</p>
-  </li>
-  <li>
-    <p>Str-Exact-ID-ID: If this value is 1.0 it means the corresponding two records refer to the same publication
-(a truematch), if it is 0.0 it corresponds to a non-match.</p>
-  </li>
-  <li>
-    <p>Q-Gram-AUTHORS-AUTHORS,Q-Gram-TITLE-TITLE,Q-Gram-VENUE-VENUE,Edit-Dist-YEAR-YEAR: These are the similarity
-values calculated when the corresponding attribute values were compared (for details see the Febrl project
- code below).</p>
-  </li>
+  <li>Number of records: 1,295</li>
+  <li>Number of entities: 112</li>
 </ul>
 
-<p>This weight vector file was generated using the <a href="https://sourceforge.net/projects/febrl/">Febrl</a> (Freely Extensible
-Biomedical Record Linkage) system. The Python script used is:</p>
+<p>Note the second column (field/attribute) contains the entity identifiers (publication identifiers).</p>
 
-<p><a href="febrl-cora-project.py">febrl-cora-project.py</a></p>
-
-<h2 id="citation">Citation</h2>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>@inproceedings{christen2015efficient,
-  title={Efficient Entity Resolution with Adaptive and Interactive Training Data Selection},
-  author={Christen, Peter and Vatsalan, Dinusha and Wang, Qing},
-  booktitle={Data Mining (ICDM), 2015 IEEE International Conference on},
-  pages={727--732},
-  year={2015},
-  organization={IEEE}
-}
-</code></pre>
-</div>
-
-<h2 id="references">References</h2>
-
-<p><a href="http://ieeexplore.ieee.org/document/7373380/">Efficient Entity Resolution with Adaptive and Interactive Training Data Selection, P Christen, D Vatsalan
-and Q Wang, 2015</a></p>
-
-<p><a href="http://link.springer.com/chapter/10.1007/978-3-319-18032-8_44">Efficient Interactive Training Selection for Large-Scale Entity Resolution, Q Wang, D Vatsalan and P
-Christen, 2015</a></p>
 
 
     </div>
